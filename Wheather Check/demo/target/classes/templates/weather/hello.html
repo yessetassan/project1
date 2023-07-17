@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+<center style="background-color: blue"> <p style="height: 100px; width: 100px;" ><font size="8" color="white">Weather News</font></p></center>
+
+<img src="https://images.pexels.com/photos/125510/pexels-photo-125510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="800" height="400">
+<br/>
+<hr/>
+<a th:href="@{/weather/measurements}">List of requests of seeing Weathers from each city !</a>
+
+<br/>
+<hr/>
+<a th:href="@{/weather/measurements/add}">Set a new query !</a>
+</body>
+</html>

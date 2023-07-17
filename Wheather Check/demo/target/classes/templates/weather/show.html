@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Measurement</title>
+</head>
+<body>
+Total info about this Measurement !
+<br/>
+Name : <p th:text="${measurement.getName()}"></p>
+Detected City : <p th:text="${measurement.getCity()}"></p>
+Weather : <p th:text="${measurement.getWeather_type()}"></p>
+Temperature : <p th:text="${measurement.getTemperature()}"></p>
+Created at : <p th:text="${measurement.getCreated_at()}"></p>
+</body>
+</html>

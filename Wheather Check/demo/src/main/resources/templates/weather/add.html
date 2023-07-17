@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/weather/measurements/add}" th:object="${sensor_dto}">
+    <label for="name">Enter Name for Sensor </label>
+    <input type="text" th:field="*{name}" id="name">
+    <br>
+    <label for="city">Enter City which you want !</label>
+    <input type="text" th:field="*{city}" id="city">
+    <div th:if="${error == true}" style="color: red">City didn't found, Try again !</div>
+    <br>
+    <input type="submit" value="Create query!">
+</form>
+</body>
+</html>

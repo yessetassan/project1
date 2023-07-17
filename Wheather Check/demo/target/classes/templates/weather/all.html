@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Measurements</title>
+</head>
+<body>
+
+<div th:if="${measurements.isEmpty()}">Empty list of requests !</div>
+
+<div th:each="x : ${measurements}">
+  <a th:href="@{/weather/measurements/{id} (id = ${x.getId()})}" th:text="${x.getName()}"></a>
+</div>
+</body>
+</html>
